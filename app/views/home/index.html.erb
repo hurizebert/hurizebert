@@ -6,6 +6,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
+<% `twitterscraper "[EWL] from:SMRT_Singapore" -bd 2017-01-01 -ed 2017-12-31 -o EWL.json` %>
+<% `twitterscraper "[NSL] from:SMRT_Singapore" -bd 2017-01-01 -ed 2017-12-31 -o NSL.json` %>
+<% `twitterscraper "[CCL] from:SMRT_Singapore" -bd 2017-01-01 -ed 2017-12-31 -o CCL.json` %>
+<% `twitterscraper "[BPLRT] from:SMRT_Singapore" -bd 2017-01-01 -ed 2017-12-31 -o BPLRT.json` %>
+
 <div id="main-container" class="container-fluid main-title">
 <h1>SMRT Disruption 2017</h1>
 <h2><%= link_to 'EWL', home_ewl_path %></h2>
