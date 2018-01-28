@@ -2,12 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.true {
+div.normal {
   background-color: lime;
   width: 18px;
   height: 18px
 }
 
-div.false {
-  background-color: red
+div.breakdown {
+  background-color: red;
+  width: 18px;
+  height: 18px
+}
+
+td.align-right {
+  text-align: right;
 }
