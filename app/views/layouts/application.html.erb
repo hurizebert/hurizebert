@@ -9,8 +9,19 @@
   </head>
 
   <body>
-    <div id="main-container"  class="container-fluid">
-      <%= yield %>
+    <div id="main-container"  class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h1>SMRT Disruption 2017</h1>
+          <h2><%= link_to 'EWL', home_ewl_path %></h2>
+          <h2><%= link_to 'NSL', home_nsl_path %></h2>
+          <h2><%= link_to 'CCL', home_ccl_path %></h2>
+          <h2><%= link_to 'BPLRT', home_bplrt_path %></h2>
+        </div>
+        <div class="col-md-9">
+          <%= yield %>
+        </div>
+      </div>
     </div>
   </body>
 </html>

@@ -2,47 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div {
+div.normal {
+  background-color: lime;
   width: 25px;
   height: 25px
 }
 
-div.normal {
-  background-color: lime;
-}
-
 div.breakdown {
   background-color: red;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.align-center {
-  text-align: center;
-}
-
-table {
-  overflow: hidden;
-}
-
-tr:hover {
-  background-color: #ffa;
-}
-
-td, th {
-  position: relative;
-}
-
-td:hover::after,
-th:hover::after {
-  content: "";
-  position: absolute;
-  background-color: #ffa;
-  left: 0;
-  top: -5000px;
-  height: 10000px;
-  width: 100%;
-  z-index: -1;
+  width: 25px;
+  height: 25px
 }
