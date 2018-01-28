@@ -1,0 +1,2 @@
+module NslHelper
+end
