@@ -7,10 +7,12 @@ class HomeController < ApplicationController
     jsonArray = JSON.parse(jsonFiles)
     timestampArray = []
     jsonArray.each do |jsonItem|
-      timestampObj = DateTime.strptime(jsonItem['timestamp'], '%Y-%m-%dT%H:%M:%S')
-      timestampObj = timestampObj + 8.hours
-      timestampArray.push((timestampObj.change(:offset => '+0800')).to_date)
-      timestampArray = timestampArray.uniq.sort()
+      if jsonItem["text"].include? "[EWL]"
+        timestampObj = DateTime.strptime(jsonItem['timestamp'], '%Y-%m-%dT%H:%M:%S')
+        timestampObj = timestampObj + 8.hours
+        timestampArray.push((timestampObj.change(:offset => '+0800')).to_date)
+        timestampArray = timestampArray.uniq.sort()
+      end
     end
     @timestampArray = timestampArray
   end
@@ -19,10 +21,12 @@ class HomeController < ApplicationController
     jsonArray = JSON.parse(jsonFiles)
     timestampArray = []
     jsonArray.each do |jsonItem|
-      timestampObj = DateTime.strptime(jsonItem['timestamp'], '%Y-%m-%dT%H:%M:%S')
-      timestampObj = timestampObj + 8.hours
-      timestampArray.push((timestampObj.change(:offset => '+0800')).to_date)
-      timestampArray = timestampArray.uniq.sort()
+      if jsonItem["text"].include? "[NSL]"
+        timestampObj = DateTime.strptime(jsonItem['timestamp'], '%Y-%m-%dT%H:%M:%S')
+        timestampObj = timestampObj + 8.hours
+        timestampArray.push((timestampObj.change(:offset => '+0800')).to_date)
+        timestampArray = timestampArray.uniq.sort()
+      end
     end
     @timestampArray = timestampArray
   end
@@ -31,10 +35,12 @@ class HomeController < ApplicationController
     jsonArray = JSON.parse(jsonFiles)
     timestampArray = []
     jsonArray.each do |jsonItem|
-      timestampObj = DateTime.strptime(jsonItem['timestamp'], '%Y-%m-%dT%H:%M:%S')
-      timestampObj = timestampObj + 8.hours
-      timestampArray.push((timestampObj.change(:offset => '+0800')).to_date)
-      timestampArray = timestampArray.uniq.sort()
+      if jsonItem["text"].include? "[CCL]"
+        timestampObj = DateTime.strptime(jsonItem['timestamp'], '%Y-%m-%dT%H:%M:%S')
+        timestampObj = timestampObj + 8.hours
+        timestampArray.push((timestampObj.change(:offset => '+0800')).to_date)
+        timestampArray = timestampArray.uniq.sort()
+      end
     end
     @timestampArray = timestampArray
   end
@@ -43,10 +49,12 @@ class HomeController < ApplicationController
     jsonArray = JSON.parse(jsonFiles)
     timestampArray = []
     jsonArray.each do |jsonItem|
-      timestampObj = DateTime.strptime(jsonItem['timestamp'], '%Y-%m-%dT%H:%M:%S')
-      timestampObj = timestampObj + 8.hours
-      timestampArray.push((timestampObj.change(:offset => '+0800')).to_date)
-      timestampArray = timestampArray.uniq.sort()
+      if jsonItem["text"].include? "[BPLRT]"
+        timestampObj = DateTime.strptime(jsonItem['timestamp'], '%Y-%m-%dT%H:%M:%S')
+        timestampObj = timestampObj + 8.hours
+        timestampArray.push((timestampObj.change(:offset => '+0800')).to_date)
+        timestampArray = timestampArray.uniq.sort()
+      end
     end
     @timestampArray = timestampArray
   end
