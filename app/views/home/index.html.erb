@@ -1,1 +1,14 @@
-<h1>Hello!</h1>
+<h1>EWL SMRT Disruption</h1>
+
+<table>
+  <% (Date.new(2017, 01, 01)..Date.new(2017, 12, 31)).each do |date| %>
+  <tr>
+    <% if @timestampArray.include? date %>
+    <td> 1 </td>
+    <% else %>
+    <td> 0 </td>
+    <% end %>
+    <td><%= date %></td>
+  </tr>
+  <% end %>
+</table>
