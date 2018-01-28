@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    render :layout => false
   end
   def ewl
     jsonFiles = File.read("EWL.json")
